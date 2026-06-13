@@ -83,7 +83,7 @@ io.on("connection", (socket) => {
 			socket.join(userId);
 			socket.hasJoined = true;
 			onlineUsers.set(userId, socket.id);
-			console.log("User joined:", userId);
+			// console.log("User joined:", userId);
 			socket.emit("connected");
 			io.emit("online-users", Array.from(onlineUsers.keys()));
 		}
@@ -114,7 +114,7 @@ io.on("connection", (socket) => {
 		}
 		socket.join(room);
 		socket.currentRoom = room;
-		console.log("User joined Room:", room);
+		// console.log("User joined Room:", room);
 	};
 
 	
